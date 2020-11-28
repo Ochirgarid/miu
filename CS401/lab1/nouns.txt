@@ -1,0 +1,12 @@
+project
+manager
+product backlog
+features
+releases
+sprint
+due date
+developer
+effort
+feature estimnation
+report
+amount of work
