@@ -4,7 +4,7 @@
 
 ```plantuml
 @startuml
-
+title **Part A Sequence diagram**
 [o-> Order : calculatePrice
 activate Order
 autonumber
@@ -31,6 +31,8 @@ Customer -> Order : getBaseValue
 
 ```plantuml
 @startuml
+title **Part B Sequence diagram**
+
 CheckOutActor -> CheckoutForm : checkoutBook
 activate CheckOutActor
 autonumber
@@ -76,89 +78,36 @@ deactivate CheckoutForm
 @enduml
 ```
 
-## Part C
-
-
-### Given class diagram
-
-```plantuml
-@startuml
-abstract class Employee {
-    - empId
-    + print()
-    + calcCompensation(month, year) : Paycheck
-    + <<abstract>> double calcGrossPay(month, year)
-}
-
-class Hourly {
-    - hourlyWage
-    - hoursPerWeek
-}
-
-class Salaried {
-    - salary
-}
-
-class Commissioned {
-    - commission
-    - baseSalary
-}
-
-class Order {
-    - orderNo
-    - oderDate
-    - oderAmount
-}
-
-class Paycheck <<immutable>> {
-    - grossPay
-    - fica
-    - state
-    - local
-    - medicare
-    - socialSecurity
-    + print()
-    + getNetPay()
-}
-hide <<immutable>> circle
-
-Employee <|-- Hourly
-Employee <|-- Salaried
-Employee <|-- Commissioned
-Commissioned "1" -- "0..*" Order : takes
-@enduml
-```
-
 ## Part D
 
 ```plantuml
 @startuml
-
+title **Part D Sequence diagram**
 [o-> Employee : calcCompensation(year, month)
 activate Employee
 alt Salary employee
-    Employee -> Salaried : calcGrossPay(year, month)
+    Employee -> Salaried : calcGrossPay\n(year,month)
     activate Salaried
-    Salaried -> Salaried : calcGrossPay(year, month)
+    Salaried -> Salaried : calcGrossPay\n(year,month)
     activate Salaried
     deactivate Salaried
     deactivate Salaried
 else Hourly paid employee
-    Employee -> Hourly : calcGrossPay(year, month)
+    Employee -> Hourly : calcGrossPay\n(year,month)
     activate Hourly
-    Hourly -> Hourly : calcGrossPay(year, month)
+    Hourly -> Hourly : calcGrossPay\n(year,month)
     activate Hourly
     deactivate Hourly
     deactivate Hourly
 else Commissioned employee
-    Employee -> Commissioned : calcGrossPay(year, month)
+    Employee -> Commissioned : calcGrossPay\n(year,month)
     activate Commissioned
     loop for each order
-        Commissioned -> Order: checkYearMonth(year, month)
+        Commissioned -> Order: checkYearMonth\n(year,month)
         activate Order
         deactivate Order
     end
-    Commissioned -> Commissioned : calcGrossPay(year, month)
+    Commissioned -> Commissioned : calcGrossPay\n(year,month)
     activate Commissioned
     deactivate Commissioned
     deactivate Commissioned

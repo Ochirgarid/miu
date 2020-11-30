@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="FXMLStringUtilityController"  xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" prefWidth="500">
+    <VBox spacing="10" alignment="BASELINE_LEFT" 
+        GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <Button text="Count Letters" onAction="#countLettersAction" prefWidth="150"/>
+        <Button text="Reverse Letters" onAction="#reverseLettersAction" prefWidth="150"/>
+        <Button text="Remove Duplicates" onAction="#removeDuplicatesAction" prefWidth="150"/>
+    </VBox>
+
+    <VBox spacing="10" alignment="BASELINE_LEFT" 
+        GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <Label text="Input" />
+        <TextField fx:id="inputField" prefWidth="150" />
+
+        <Label text="Output" />
+        <TextField fx:id="outputField" prefWidth="150" />
+    </VBox>
+</GridPane>

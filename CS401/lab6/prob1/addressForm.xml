@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="FXMLAddressController"  xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" prefWidth="500">
+    <HBox spacing="10" alignment="center" 
+        GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <Label text="Name" />
+        <TextField fx:id="nameField" promptText="Dave Smith" prefWidth="100" />
+
+        <Label text="Street" />
+        <TextField fx:id="streetField" promptText="123 North B" prefWidth="110"  />
+
+        <Label text="City" />
+        <TextField fx:id="cityField" promptText="Fairfield" prefWidth="90" />
+    </HBox>
+
+    <HBox spacing="10" alignment="center" 
+        GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <Label text="State" />
+        <TextField fx:id="stateField" promptText="Iowa" prefWidth="90" />
+
+        <Label text="Zip" />
+        <TextField fx:id="zipField" promptText="52556" prefWidth="90" />
+    </HBox>
+
+    <HBox spacing="10" alignment="center" 
+        GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <Button text="Submit" onAction="#submitAction"/>
+    </HBox>
+</GridPane>
