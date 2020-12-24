@@ -1,0 +1,7 @@
+i.
+    There is no parameter.
+    Free variables: s, t
+
+ii.
+    Parameters: s, t.
+    Free variables: ignoreCase

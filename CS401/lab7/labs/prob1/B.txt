@@ -1,0 +1,6 @@
+Because in List<Employee>'s contains method calls the method indexOf(Object o) in ArrayList class, 
+and in indexOf method it calls the override method equals(Object ob) of Employee class. But in our case
+we don't have override method equals(Object ob) in Empoyee class. So the indexOf method returns -1,
+and then contains returns indexOf(ob) >= 0, so it is false. It means we don't have method to
+equal Employee object to object of Object type. In other words, if we need to use ArrayList of our 
+new implemented class, we should have override method equals(Object o) in our new implemented class.

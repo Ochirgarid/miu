@@ -1,0 +1,3 @@
+ArrayList 
+	extends class: AbstractList
+	implements interfaces: Serializable, Cloneable, Iterable<E>, Collection<E>, List<E>, RandomAccess 

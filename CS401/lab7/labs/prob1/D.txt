@@ -1,0 +1,5 @@
+All Employees, who have same names and salaries are equal, so they should have same hashcode. Also hashCode method of Employee
+object depends on name, salary and visited values. But when Employee object appears second time in HashMap the 
+tracker.get(e).setVisited(true) line of code changes the visited value. So next time it will show different hashcode for 
+employee object which is already in HashMap. It means that the index of hashtable will be different, so tracker.containsKey(e)
+returns false and it put the employee again in HashMap.

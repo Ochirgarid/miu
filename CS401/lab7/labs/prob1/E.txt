@@ -1,0 +1,8 @@
+(i) Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+
+		at labs.prob1.partE.D.main(D.java:4)
+		
+(ii) It is the same error.
+
+
+in both cases Java8 forces to implement one of the methods

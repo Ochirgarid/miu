@@ -1,0 +1,11 @@
+1. If two Employee objects have the same name, what is the return value of compare?
+    The return value is 0.
+
+2. This tells us that these Employee objects should be equal, but is this always true?
+    No, it is not always true, because in compare method, there just comparing by names of employees.
+    Two employees are equal, if they have same names and salary.
+
+3. Give an example of two Employee objects having the same name but that should not be considered equal.
+
+    Employee e1 = new Employee("John", 200000);
+    Employee e2 = new Employee("John", 180000);

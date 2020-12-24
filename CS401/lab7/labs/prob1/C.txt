@@ -1,0 +1,2 @@
+When we use HashMap of our implemented class, the override method hashcode should have been implemented in our class 
+like before the override method equals. Because the containsKey method of HashMap needs hashcode method of implemented class.
