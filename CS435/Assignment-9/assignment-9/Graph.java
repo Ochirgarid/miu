@@ -228,7 +228,9 @@ public class Graph {
 		l.add(new Pair("H","F"));
 
 		/*
-			A--B--C--D
+			B
+			| \
+			A--C--D
 			|
 			E--F
 			   | \
@@ -244,6 +246,8 @@ public class Graph {
 
 		Vertex A = g.vertices.get(0);
 		Vertex D = g.vertices.get(3);
+		System.out.println(A);
+		System.out.println(D);
 		System.out.println("Shortest path length from A to D: \n\t" +
 			g.shortestPathLength(A, D)
 		);
