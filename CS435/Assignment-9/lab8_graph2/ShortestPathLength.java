@@ -15,7 +15,10 @@ public class ShortestPathLength extends BreadthFirstSearch {
         currentLevel = 0;
         vertexLevel = new HashMap<>();
 		start(u);
-		return vertexLevel.get(v);
+		if (vertexLevel.containsKey(v)) {
+			return vertexLevel.get(v);
+		}
+		return -1;
 	}
 
 }

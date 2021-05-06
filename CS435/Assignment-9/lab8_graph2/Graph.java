@@ -132,6 +132,11 @@ public class Graph {
 		return spl.shortestPathLength(u, v);
 	}
 	
+	public List<Vertex> shortestPath(Vertex u, Vertex v){ 
+		ShortestPath sp = new ShortestPath(this);
+		return sp.shortestPath(u, v);
+	}
+
 	public List<Graph> connectedComponents() {
 		return null;
 	}
@@ -237,8 +242,15 @@ public class Graph {
 		System.out.println("spanning tree:");
         System.out.println(tree);
 
-		System.out.println("Shortest path from A to D:" +
-			g.shortestPathLength(g.vertices.get(0), g.vertices.get(3))
+		Vertex A = g.vertices.get(0);
+		Vertex D = g.vertices.get(3);
+		System.out.println("Shortest path length from A to D: \n\t" +
+			g.shortestPathLength(A, D)
+		);
+
+		List<Vertex> sp = g.shortestPath(A, D);
+		System.out.println("Shortest path from A to D: \n\t" +
+			sp
 		);
 	}
 }
